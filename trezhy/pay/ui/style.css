@@ -1,0 +1,23 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+
+@font-face{
+    font-family: tre;
+    src: url('../fonts/Amatic\ SC-regular.ttf');
+}
+
+body, html{ background: #000; color: #f7f7f7; font-size: 20px; font-weight: 600; font-family: tre;}
+
+.servercentercarr{width: 670px; margin: 0 auto 10px; padding: 10px; text-align: center;}
+@media(max-width: 999px){.servercentercarr{width: 90%;}}
+input{width: 100%; border: 1px solid #535353ab; padding: 8px; color: #fff; background: #1b1b1b8c; outline: none; border-radius: 3px; font-size: 20px; font-weight: 600;}
+.server{text-align: left;} .lean{display: none;}
+.iframeservetY{width: 100%; height: 100vh; display: none;}
+#saveForm{display: inline;}
+.imageselect{padding: 10px; border: 4px dotted #fff; width: 100%;}
+#hserver{cursor: pointer; padding: 10px 30px; background: #53535350; border-radius: 5px;  border: 1px solid #535353ab;}
+#previwmyimagefdp{max-width: 100%; max-height: 100%; margin: 10px; margin: 20px;}
+.topcarrtre{position: fixed; top: 0; left: 20%; right: 20%; height: 7vh; border-bottom: 1px solid #535353ab;display: flex; justify-content: space-between; background: #0a0a0aa8; backdrop-filter: blur(10px);  margin: 0 auto 10px; }
+.btnserverT{border: none; font-size: 25px; cursor: pointer; background: #0d660d; color: #fff; padding: 10px; border-radius: 40px; font-family: tre; width: 70%; font-weight: 600;}
+@media(max-width: 999px){
+    .topcarrtre{ left: 0; right:0;}
+}
