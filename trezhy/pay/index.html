@@ -91,7 +91,7 @@
                 formData.append("image", document.getElementById("image").files[0]);
     
                 try {
-                    let response = await fetch("http://localhost:4040/t", {
+                    let response = await fetch("https://trezhy.onrender.com/t", {
                         method: "POST",
                         body: formData
                     });
@@ -103,7 +103,7 @@
                     document.querySelector('.divsbottom').style.display = "flex";
                     document.getElementById('saveForm').style.display = "none";
                     document.querySelector('.iframeservetY').style.display = "inline";
-                    document.getElementById('iframegays').src = `http://localhost:4040/you/${data.idserver}`
+                    document.getElementById('iframegays').src = `https://trezhy.onrender.com/you/${data.idserver}`
                     document.getElementById('iframegays').style.display = "inline";
                    server(data);
                 } catch (error) {
@@ -113,7 +113,7 @@
 
             function server(data){
                 document.getElementById('btnserverTU').addEventListener('click', async () => {
-                    window.location.href = `http://localhost:4040/you/${data.idserver}`
+                    window.location.href = `https://trezhy.onrender.com/you/${data.idserver}`
 })
             }
         </script>

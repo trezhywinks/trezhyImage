@@ -4,8 +4,7 @@
   "main": "node trezhy/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node trezhy/main.js",
-    "server": "nodemon trezhy/main.js"
+    "start": "node trezhy/main.js"
   },
   "keywords": [],
   "author": "",

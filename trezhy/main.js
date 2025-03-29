@@ -38,7 +38,7 @@ app.post("/t", upload.single("image"), async (req, res) => {
 
         res.json({
             mensagem: "Sucess!",
-            url: `http://localhost:4040/imagens/${newImage._id}.png`,
+            url: `https://trezhy.onrender.com/imagens/${newImage._id}.png`,
             idserver: newImage._id
         });
     } catch (error) {
