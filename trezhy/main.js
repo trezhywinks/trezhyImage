@@ -93,6 +93,8 @@ app.get("/you/:id", async (req, res) => {
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
     <meta property="og:image:alt" content="Not for Drugs" />
+    <link rel="icon" type="image/png" href="http://192.168.1.6:4040/icon_2x/" sizes="32x32">
+    <link rel="shortcut icon" href="http://192.168.1.6:4040/icon/" type="image/x-icon">
                 <title>${image.name}</title>
             </head>
             <body> 
@@ -118,6 +120,14 @@ app.use(express.static('./trezhy/pay'));
 
 app.get('/server', (req, res) => {
     res.sendFile(__dirname +  '/pay/index.html');
+})
+
+app.get('/icon_2x', (req, res) => {
+    res.sendFile(__dirname + '/pay/image/favicon_2x.png');
+})
+
+app.get('/icon', (req, res) => {
+    res.sendFile(__dirname + '/pay/image/favicon.png');
 })
 
 app.get('/server', (req, res) => {
