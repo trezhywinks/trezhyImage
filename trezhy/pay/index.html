@@ -76,7 +76,7 @@
         </script>
     </div>
     <br>
-    <span style="color: rgb(8, 87, 190);" id="userid"></span>
+    <span style="color: #0857be;" id="userid"></span>
         <script>
 
             document.getElementById('image').addEventListener("change", function(event) {
@@ -124,7 +124,7 @@
                     document.querySelector('.iframeservetY').style.display = "inline";
                     document.getElementById('iframegays').src = `https://trezhy.onrender.com/you/${data.idserver}`
                     document.getElementById('iframegays').style.display = "inline";
-                    document.getElementById('userid').innerText = `https://trezhy.onrender.com/imagens/${data.idserver}`
+                    document.getElementById('userid').innerHTML = `<a href="https://trezhy.onrender.com/imagens/${data.idserver}.png" style="text-decoration: none; color: #0857be; font-weight: 600;">https://trezhy.onrender.com/${data.idserver}</a>`
                    server(data);
                 } catch (error) {
                     console.error("Erro:", error);
