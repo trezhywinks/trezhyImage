@@ -86,9 +86,9 @@ app.get("/you/:id", async (req, res) => {
     <meta name="og:description" content="Welcome to Trezhy"/>
     <meta name="og:url" content=""/>
     <meta name="og:title" content="${image.name}"/>
-    <meta name="og:image" content="${imageSrc}">
-    <meta property="og:image" content="${imageSrc}" />
-    <meta property="og:image:secure_url" content="${imageSrc}" />
+    <meta name="og:image" content="https://trezhy.onrender.com/imagens/${image._id}.png">
+    <meta property="og:image" content="https://trezhy.onrender.com/imagens/${image._id}.png" />
+    <meta property="og:image:secure_url" content="https://trezhy.onrender.com/imagens/${image._id}.png" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />

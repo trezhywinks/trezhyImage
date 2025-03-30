@@ -38,7 +38,7 @@
     <div class="servercentercarr">
     <br><br><br><br>
     <div class="iframeservetY">
-        <iframe src="" id="iframegays" style="width: 100%; border: none; height: 100vh; display: none;"></iframe>
+        <iframe src="" id="iframegays" style="width: 100%; border: none; height: 80vh; display: none;"></iframe>
     </div>
     <form id="saveForm">
         <div   class="server" style="text-align: left">
@@ -56,7 +56,24 @@
     </form>
     <div class="divsbottom" style="display: none; justify-content: space-between; width: 100%;">
         <button class="btnserverT" id="btnserverTU">View Image</button>
-        <button class="btnserverT">Share URL</button>
+        <button class="btnserverT" onclick="shareLink()">Share URL</button>
+        <script>
+            function shareLink() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Check out this link!',
+                        text: 'Take a look at this content:',
+                        url: 'https://trezhy.onrender.com/'
+                    }).then(() => {
+                        console.log('Successful sharing');
+                    }).catch((error) => {
+                        console.error('Error when sharing', error);
+                    });
+                } else {
+                    alert("Your browser does not support native sharing.");
+                }
+            }
+        </script>
     </div>
         <script>
 
@@ -91,7 +108,7 @@
                 formData.append("image", document.getElementById("image").files[0]);
     
                 try {
-                    let response = await fetch("https://trezhy.onrender.com/t", {
+                        let response = await fetch("https://trezhy.onrender.com/t", {
                         method: "POST",
                         body: formData
                     });
