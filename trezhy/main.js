@@ -105,7 +105,7 @@ app.get("/you/:id", async (req, res) => {
 }
             .servercentercarr{width: 100%; margin: 0 auto 10px; padding: 10px; text-align: center;}
 @media(max-width: 999px){.servercentercarr{width: 90%;}}
-body{color: #fff; background: #000; fon-family: tre; font-weight: 600; font-size: 35px;}
+body{color: #fff; background: #000; font-family: tre; font-weight: 600; font-size: 35px;}
             </style>
             <div class="servercentercarr">
                 <h1>${image.name}</h1>
