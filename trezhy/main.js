@@ -99,9 +99,13 @@ app.get("/you/:id", async (req, res) => {
             </head>
             <body> 
             <style>
+            @font-face{
+    font-family: tre;
+    src: url('https://trezhy.onrender.com/fonts');
+}
             .servercentercarr{width: 100%; margin: 0 auto 10px; padding: 10px; text-align: center;}
 @media(max-width: 999px){.servercentercarr{width: 90%;}}
-body{color: #fff; background: #000;}
+body{color: #fff; background: #000; fon-family: tre; font-weight: 600; font-size: 35px;}
             </style>
             <div class="servercentercarr">
                 <h1>${image.name}</h1>
@@ -120,6 +124,10 @@ app.use(express.static('./trezhy/pay'));
 
 app.get('/server', (req, res) => {
     res.sendFile(__dirname +  '/pay/index.html');
+})
+
+app.get('/fonts', (req, res) => {
+    res.sendFile(__dirname + '/pay/fonts/Amatic\ SC-regular.ttf')
 })
 
 app.get('/icon_2x', (req, res) => {

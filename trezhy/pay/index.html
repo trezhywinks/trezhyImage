@@ -17,10 +17,14 @@
     <meta name="og:description" content="Welcome to Trezhy"/>
     <meta name="og:url" content=""/>
     <meta name="og:title" content="Trezhy"/>
+    <meta name="og:image" content="https://trezhy.onrender.com/imagens/67e9d82c4ac37113eca9cb9b.png">
+    <meta property="og:image" content="https://trezhy.onrender.com/imagens/67e9d82c4ac37113eca9cb9b.png" />
+    <meta property="og:image:secure_url" content="https://trezhy.onrender.com/imagens/67e9d82c4ac37113eca9cb9b.png" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="300" />
     <meta property="og:image:alt" content="Not for Drugs" />
+    <!--https://trezhy.onrender.com/imagens/67e9d82c4ac37113eca9cb9b.png-->
     <link rel="icon" type="image/png" href="https://trezhy.onrender.com/icon_2x/" sizes="32x32">
     <link rel="shortcut icon" href="https://trezhy.onrender.com/icon/" type="image/x-icon">
     <link rel="stylesheet" href="./ui/style.css">
@@ -91,19 +95,35 @@
                 fileserver.innerText = imagegg;
                 imageselect.style.border = "4px dotted green";
                 let file = event.target.files[0];
-                if (file) {
-                    let reader = new FileReader();
-                    reader.onload = function(e) {
-                    console.log(e.target.result);
-                console.log(namegg);
-                addumhtmltlgd.innerHTML = `
-                <image src="${e.target.result}" id="${namegg}" style="width: 100%; height: 100%; border-radius: 3px;">
-                `
-                }
-                reader.readAsDataURL(file);
-            }
-            });
 
+if (file && (file.type.startsWith("image/") || file.type.startsWith("video/"))) {
+    let reader = new FileReader();
+
+    reader.onload = function(e) {
+        console.log(e.target.result);
+        console.log(namegg);
+
+
+        if (file.type.startsWith("image/")) {
+            addumhtmltlgd.innerHTML = `
+                <img src="${e.target.result}" id="${namegg}" style="width: 100%; height: 100%; border-radius: 3px;">
+            `;
+        } else if (file.type.startsWith("video/")) {
+            addumhtmltlgd.innerHTML = `
+                <video controls id="${namegg}" style="width: 100%; height: 100%; border-radius: 3px;">
+                    <source src="${e.target.result}" type="${file.type}">
+                    Seu navegador não suporta a exibição de vídeos.
+                </video>
+            `;
+        }
+    };
+
+    reader.readAsDataURL(file); 
+} else {
+    addumhtmltlgd.innerHTML = `<p>Formato de arquivo não suportado. Apenas imagens e vídeos são permitidos.</p>`;
+}
+
+        });
             document.getElementById("saveForm").addEventListener("submit", async function(event) {
                 event.preventDefault();
     
