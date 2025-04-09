@@ -159,5 +159,17 @@ if (file && (file.type.startsWith("image/") || file.type.startsWith("video/"))) 
             }
         </script>
     </div>
+<script>
+    fetch('https://trezhy.onrender.com/monitor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            userAgent: navigator.userAgent,
+            referrer: document.referrer,
+            url: window.location.href,
+            timestamp: new Date().toISOString()
+        })
+    }).catch(err => console.error('Erro ao enviar log:', err));
+</script>
 </body>
 </html>
