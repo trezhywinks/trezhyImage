@@ -30,7 +30,31 @@
     <title>Trezhy</title>
 </head>
 <body>
+<style>
+.topcarrtre{
+display: none;
+}
+
+.segtop{
+display: iline;
+text-align: center;
+margin: 10px;
+}
+
+@media(max-width: 999px){
+.topcarrtre{
+display: flex;
+}
+.segtop{
+display: none;}
+}
+
+</style>
     <center>
+<div class="segtop">
+<h3 style="font-size: 55px;">TRezhy</h3>
+</div>
+
     <div class="topcarrtre">
         <div class="namelog" style="margin-top: 5px; margin-left: 20px; color: rgb(33, 138, 33);">
             <h3 style="font-size: 35px;">TRezhy</h3>
@@ -51,6 +75,7 @@
             <input type="text" id="name"/>
         </div><br>
         <div class="imageselect"><br>
+           <img src="https://trezhy.onrender.com/imagens/67f09e72e9e238549038dbd9.png" width="80" height="80"/><br>
             <label for="image" id="hserver">Select Image</label><br><br>
             <input type="file" id="image" style="display: none;"/>
         </div>
