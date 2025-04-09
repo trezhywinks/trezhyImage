@@ -111,7 +111,7 @@ if (file && (file.type.startsWith("image/") || file.type.startsWith("video/"))) 
             addumhtmltlgd.innerHTML = `
                 <video controls id="${namegg}" style="width: 100%; height: 100%; border-radius: 3px;">
                     <source src="${e.target.result}" type="${file.type}">
-                    Seu navegador não suporta a exibição de vídeos.
+                    erro
                 </video>
             `;
         }
@@ -119,7 +119,7 @@ if (file && (file.type.startsWith("image/") || file.type.startsWith("video/"))) 
 
     reader.readAsDataURL(file); 
 } else {
-    addumhtmltlgd.innerHTML = `<p>Formato de arquivo não suportado. Apenas imagens e vídeos são permitidos.</p>`;
+    addumhtmltlgd.innerHTML = `<p style="color: red;">File format not supported. Only images and videos are allowed</p>`;
 }
 
         });
