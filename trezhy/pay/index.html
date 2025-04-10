@@ -49,6 +49,11 @@ display: flex;
 display: none;}
 }
 
+.servernamer{
+display: flex;
+}
+.simh{
+width: 100%;}
 </style>
     <center>
 <div class="segtop">
@@ -72,8 +77,18 @@ display: none;}
     <form id="saveForm">
         <div   class="server" style="text-align: left">
             <label for="name">Name</label><br>
-            <input type="text" id="name"/>
-        </div><br>
+            <div class="servernamer">
+     <div class="srv">
+<style>
+.srv{margin-left:10px; margin-top: 8px;}
+</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;transform: ;msFilter:;"><path d="M3 8h2v5c0 2.206 1.794 4 4 4h2v5h2v-5h2c2.206 0 4-1.794 4-4V8h2V6H3v2zm4 0h10v5c0 1.103-.897 2-2 2H9c-1.103 0-2-.897-2-2V8zm0-6h2v3H7zm8 0h2v3h-2z"></path></svg>
+</div>
+<div class="simh">
+       <input type="text" id="name"/>
+</div>
+</div>        
+</div><br>
         <div class="imageselect"><br>
            <img src="https://trezhy.onrender.com/imagens/67f09e72e9e238549038dbd9.png" width="80" height="80"/><br>
             <label for="image" id="hserver">Select Image</label><br><br>
