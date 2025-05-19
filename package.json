@@ -1,12 +1,12 @@
 {
   "name": "trezhy-pay",
   "version": "1.0.0",
-  "main": "trezhy/main.js",
+  "main": "trezhy/image.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "moni": "node trezhy/server.js",
-    "server": "nodemon trezhy/main.js",
-    "start": "node trezhy/main.js"
+    "server": "nodemon trezhy/image.js",
+    "start": "node trezhy/image.js"
   },
   "keywords": [],
   "author": "",
