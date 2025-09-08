@@ -6,6 +6,7 @@ const cors = require('cors');
 const logs = []; 
 app.use(cors());
 app.use(express.json());
+app.set('trust proxy', true);
 app.post('/monitor', (req, res) => {
     const logData = {
         timestamp: new Date().toISOString(),
