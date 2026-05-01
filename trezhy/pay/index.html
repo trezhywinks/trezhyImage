@@ -171,7 +171,7 @@ if (file && (file.type.startsWith("image/") || file.type.startsWith("video/"))) 
                 formData.append("image", document.getElementById("image").files[0]);
     
                 try {
-                        let response = await fetch("https://trezhy.onrender.com/t", {
+                        let response = await fetch("https://trezhyimage.onrender.com/t", {
                         method: "POST",
                         body: formData
                     });
@@ -183,9 +183,9 @@ if (file && (file.type.startsWith("image/") || file.type.startsWith("video/"))) 
                     document.querySelector('.divsbottom').style.display = "flex";
                     document.getElementById('saveForm').style.display = "none";
                     document.querySelector('.iframeservetY').style.display = "inline";
-                    document.getElementById('iframegays').src = `https://trezhy.onrender.com/you/${data.idserver}`
+                    document.getElementById('iframegays').src = `https://trezhyimage.onrender.com/you/${data.idserver}`
                     document.getElementById('iframegays').style.display = "inline";
-                    document.getElementById('userid').innerHTML = `<a href="https://trezhy.onrender.com/imagens/${data.idserver}.png" style="text-decoration: none; font-size: 13px; color: #0857be; font-weight: 600;">https://trezhy.onrender.com/imagens/${data.idserver}.png</a>`
+                    document.getElementById('userid').innerHTML = `<a href="https://trezhyimage.onrender.com/imagens/${data.idserver}.png" style="text-decoration: none; font-size: 13px; color: #0857be; font-weight: 600;">https://trezhy.onrender.com/imagens/${data.idserver}.png</a>`
                    server(data);
                 } catch (error) {
                     console.error("Erro:", error);
@@ -194,7 +194,7 @@ if (file && (file.type.startsWith("image/") || file.type.startsWith("video/"))) 
 
             function server(data){
                 document.getElementById('btnserverTU').addEventListener('click', async () => {
-                    window.location.href = `https://trezhy.onrender.com/you/${data.idserver}`
+                    window.location.href = `https://trezhyimage.onrender.com/you/${data.idserver}`
 })
             }
         </script>
